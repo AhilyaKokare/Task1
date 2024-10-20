@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Custom background with diagonal split */
+        .bg-diagonal {
+            position: relative;
+            background-color: #F3F4F6; /* Light gray for base */
+            padding-top: 3rem;
+            margin: 3%;
+            margin-top: 1%;
+        }
+        .bg-diagonal::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #160442cd; /* Purple */
+            /* More diagonal to the top right corner */
+            clip-path: polygon(0 0, 100% 0, 100% -5%, 0 105%);
+            z-index: 0;
+        }
+
+        .icon-wrapper {
+            background-color: #fff;
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: -70px auto 0; /* Position the icon inside the card and slightly overlap */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 4px solid #4B0082; /* Add purple border */
+            position: relative;
+            z-index: 2;
+        }
+
+        .icon-wrapper img {
+            width: 48px;
+            height: 48px;
+        }
+
+        .service-card {
+            position: relative;
+            background-color: white;
+            z-index: 1;
+            transition: box-shadow 0.3s ease, transform 0.6s ease-in-out; /* Add transform for card rotation */
+            padding-top: 3.5rem; /* Adjust padding to make room for the icon */
+        }
+
+        .service-card:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            transform: rotate(360deg); /* Rotate the entire card */
+        }
+
+        /* Margin adjustments */
+        .services-container {
+            padding: 3rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        h2 {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-text {
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Services Section with diagonal background -->
+    <div id="assignment" class="bg-diagonal">
+        <!-- Left-aligned section title -->
+        <div class="services-container">
+            <h2 class="text-4xl font-bold tracking-wide uppercase text-left">Our Services</h2>
+        </div>
+
+        <!-- Services grid -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center relative z-10 services-container">
+            <!-- Emergency Plumbing Services -->
+            <div class="service-card bg-white shadow-md p-8">
+                <div class="icon-wrapper">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf84q8aKod3skS4Ydq65qv4_7PHJiV4w9jiQ&s" alt="Emergency Plumbing Icon" />
+                </div>
+                <h3 class="text-lg font-bold mt-6 mb-4">Emergency Plumbing Services</h3>
+                <p class="service-text mb-6">Our plumbers are ready to go 24/7 for emergencies - including nights, weekends, and holidays.</p>
+                <a href="#" class="text-purple-600 font-bold">EXPLORE THIS SERVICES &gt;</a>
+            </div>
+
+            <!-- Plumbing and Drains -->
+            <div class="service-card bg-white shadow-md p-8">
+                <div class="icon-wrapper">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5ytpJ2dj5TXW-6erpz_stft_Q1A-rOIwgnw&s" alt="Plumbing and Drains Icon" />
+                </div>
+                <h3 class="text-lg font-bold mt-6 mb-4">Plumbing and Drains</h3>
+                <p class="service-text mb-6">As the largest plumbing and drain service company, we make thousands of repairs every day.</p>
+                <a href="#" class="text-purple-600 font-bold">EXPLORE THIS SERVICES &gt;</a>
+            </div>
+
+            <!-- Water Damage -->
+            <div class="service-card bg-white shadow-md p-8">
+                <div class="icon-wrapper">
+                    <img src="https://cdn-icons-png.freepik.com/256/15889/15889404.png?semt=ais_hybrid" alt="Water Damage Icon" />
+                </div>
+                <h3 class="text-lg font-bold mt-6 mb-4">Water Damage</h3>
+                <p class="service-text mb-6">Our teams are equipped with state-of-the-art water extraction and cleanup equipment.</p>
+                <a href="#" class="text-purple-600 font-bold">EXPLORE THIS SERVICES &gt;</a>
+            </div>
+
+            <!-- Water Heaters -->
+            <div class="service-card bg-white shadow-md p-8">
+                <div class="icon-wrapper">
+                    <img src="https://cdn-icons-png.freepik.com/256/6374/6374466.png?semt=ais_hybrid" alt="Water Heaters Icon" />
+                </div>
+                <h3 class="text-lg font-bold mt-6 mb-4">Water Heaters</h3>
+                <p class="service-text mb-6">Trust Roto-Rooter for repair and replacement of gas, electric, and tankless water heaters.</p>
+                <a href="#" class="text-purple-600 font-bold">EXPLORE THIS SERVICES &gt;</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
